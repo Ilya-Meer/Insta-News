@@ -134,6 +134,11 @@ body {
   /* border: 2px solid white; */
 }
 
+.loader {
+  width: 40px;
+  border: 1px solid white;
+}
+
 select {
   width: 100px;
   margin: 20px auto;
@@ -175,8 +180,15 @@ footer p {
     
   }
 
+table, tr, td {
+  border: 1px solid red;
+}
 
-
+table {
+  width: 50%;
+  height: 50vw;
+  
+}
 
 
 
