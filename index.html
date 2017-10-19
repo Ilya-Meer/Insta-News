@@ -6,7 +6,7 @@
     <title>InstaNews</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="build/js/script.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">    
+    <link rel="stylesheet" type="text/css" href="build/css/style.min.css">    
   </head>
   <body>
 
@@ -14,15 +14,14 @@
     <img src="assets/images/nyt-logo.svg">
     <div class="instructions">
       <p>Choose a section:</p>
-        <select name="select"> 
-          <option value="value1">Sections...</option> 
-          <option value="value2">Health</option> 
-          <option value="value3">Science</option>
-          <option value="value4">Tech</option>
+        <select name="select" id="menu"> 
+          <option value="none">Sections...</option> 
+          <option value="books">Books</option> 
+          <option value="sports">Sports</option>
+          <option value="politics">Politics</option>
         </select>    
     </div>
   </header>
-  <button>Button</button>
     <ul class="headlines">
       <li>Hello, I'm a list!</li>
     </ul>
