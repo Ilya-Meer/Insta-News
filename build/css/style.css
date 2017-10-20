@@ -146,13 +146,25 @@ table {
   .add-photos-tablet {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    margin-left: 130px; } }
+    height: auto; }
+    .add-photos-tablet img {
+      height: 80px;
+      margin-top: 10px;
+      margin-left: 100px; } }
 
 @media all and (min-width: 1000px) {
   .main {
     display: grid;
     grid-template-columns: 1fr 5fr;
     margin-left: 30px; }
+  .add-photos-desktop {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    height: auto; }
+    .add-photos-desktop img {
+      height: 80px;
+      margin-top: 10px;
+      margin-left: 100px; }
   .instructions {
     grid-column: 2 / 3;
     display: -webkit-box;
@@ -166,11 +178,7 @@ table {
         -ms-flex-pack: start;
             justify-content: flex-start;
     width: 300px;
-    margin-left: 40px; }
-  .add-photos-tablet {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    margin-left: 130px; } }
+    margin-left: 40px; } }
 
 body {
   font-size: 16px;
@@ -179,29 +187,64 @@ body {
   font-weight: 300;
   background-color: black; }
 
-.loader {
-  width: 40px;
-  border: 1px solid white; }
-
 select {
   width: 100px;
   margin: 20px auto; }
 
-@media all and (min-width: 600px) {
-  ul {
-    text-align: center;
-    width: 50%; }
-  li {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 25%;
-            flex: 1 1 25%;
+.headlines {
+  width: 100%; }
+  .headlines a {
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-decoration: none;
+    height: 100vw;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
-  li img {
-    width: 50px; }
-  li p {
-    display: inline; } }
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+
+.list-image {
+  background: rgba(50, 50, 50, 0.5);
+  color: white; }
+
+@media all and (min-width: 600px) {
+  .headlines {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    .headlines a {
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-decoration: none;
+      height: 50vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+  .list-image {
+    background: rgba(50, 50, 50, 0.5);
+    color: white; } }
+
+@media all and (min-width: 1000px) {
+  .headlines {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
+    .headlines a {
+      height: 25vw; } }
 
 footer {
   bottom: 50px;

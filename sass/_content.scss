@@ -1,4 +1,3 @@
-
 body {
   font-size: 16px;
   color: white;
@@ -7,42 +6,99 @@ body {
   background-color: black;
 }
 
-
-.loader {
-  width: 40px;
-  border: 1px solid white;
-}
-
 select {
   width: 100px;
   margin: 20px auto;
 }
 
+.headlines {
+  width: 100%;
+
+   a {
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-decoration: none;
+    height: 100vw;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+  }
+}
+
+.list-image {
+  background: rgba(50, 50, 50, 0.5);
+  color: white;
+}
 
 
 @media all and (min-width: 600px) {
-    
+   
+  .headlines {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-  ul {
-    text-align: center;
-    width: 50%;
+  
+     a {
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-decoration: none;
+      height: 50vw;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-end;
+    }
   }
-
-  li {
-    flex: 1 1 25%;
-    display: flex;
+  
+  .list-image {
+    background: rgba(50, 50, 50, 0.5);
+    color: white;
   }
+  
+}
 
-  li img {
-    width: 50px;
-  }
 
-  li p {
-    display: inline;
-  }
 
+
+@media all and (min-width: 1000px) {
+  .headlines {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    a {
+      height: 25vw;
+    }
 
 
 }
 
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// total = 12
+// if i < total && if the picture category is empty, then do the shit, 
+
+// \otherwise,up total to 13 i++
