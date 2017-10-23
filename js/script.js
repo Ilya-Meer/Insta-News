@@ -12,6 +12,12 @@ $(function () {
       'api-key': '1d3d67d37ae24c4a835479a2882cd51d'
     });
 
+    if($('#menu option:selected').text() === '') {
+      $('.headlines').empty();
+      return true;
+    }
+
+
     $.ajax({
       url: url,
       method: 'GET'
@@ -33,17 +39,13 @@ $(function () {
           $('.anchor').on('mouseleave', function () {
             $(this).children().css('visibility', 'hidden');
           })
-
         });
-
       })
       .fail(function () {
-        console.log('Whoops!');
-        $('footer').prepend('<h3>Sorry! There was a problem, please try again!</h3>');
+        $('.headlines').append('<h3>Sorry! There was a problem, please try again!</h3>');
 
       }).always(function () {
         $('.loader').remove();
-        $('h3').remove();
       });
   });
 

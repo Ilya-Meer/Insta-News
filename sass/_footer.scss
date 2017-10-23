@@ -4,12 +4,17 @@ footer {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  
 }
 
 footer p {
   margin-top: 80px;
   margin-bottom: 30px;
   color: #c2c2c2;
+}
+
+.copyright {
+  text-transform: uppercase;
 }
 
 
