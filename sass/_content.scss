@@ -1,3 +1,4 @@
+
 body {
   font-size: 16px;
   color: white;
@@ -6,10 +7,22 @@ body {
   background-color: black;
 }
 
+h3 {
+  text-align: center;
+}
+
 select {
   width: 100px;
   margin: 20px auto;
 }
+
+.loader {
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+
+
 
 .headlines {
   width: 100%;
@@ -27,7 +40,7 @@ select {
 }
 
 .list-image {
-  background: rgba(50, 50, 50, 0.5);
+  background: $captionBackground;
   color: white;
 }
 
@@ -52,7 +65,7 @@ select {
   }
   
   .list-image {
-    background: rgba(50, 50, 50, 0.5);
+    background: $captionBackground;
     color: white;
   }
   
@@ -76,29 +89,3 @@ select {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// total = 12
-// if i < total && if the picture category is empty, then do the shit, 
-
-// \otherwise,up total to 13 i++

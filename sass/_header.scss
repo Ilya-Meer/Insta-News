@@ -51,11 +51,11 @@
       margin-left: 40px;
     }
 
-    .add-photos-tablet {
-      display: grid;
-      grid-template-columns: 1fr 5fr;    
-      height: auto;
-
+    .add-photos {
+      height: 100px;
+      margin: 10px auto;
+      padding-left: 40px;
+    
       img {
         height: 80px;
         margin-top: 10px;
@@ -65,9 +65,6 @@
   }
 
 
-
-  
-
 @media all and (min-width: 1000px) {
   
   
@@ -75,18 +72,17 @@
   .main {
       display: grid;
       grid-template-columns: 1fr 5fr;    
-      margin-left: 30px;
+      margin-left: 10px;
   }
 
-  .add-photos-desktop {
-    display: grid;
-    grid-template-columns: 1fr 5fr;    
-    height: auto;
-
+  .add-photos {
+    height: 100px;
+    padding: 0;
+  
     img {
       height: 80px;
       margin-top: 10px;
-      margin-left: 100px;
+      margin-left: 0;
     }
   }
 
@@ -97,7 +93,7 @@
       flex-flow: column wrap;
       justify-content: flex-start;
       width: 300px;
-      margin-left: 40px; 
+      margin-left: 0; 
   }
 
 }  
