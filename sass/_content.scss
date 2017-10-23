@@ -14,7 +14,6 @@ select {
 
 h3 {
   text-align: center;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-style: italic;
 }
 
@@ -59,21 +58,12 @@ h3 {
     grid-template-columns: 1fr 1fr;
 
   
-     a {
-      background-repeat: no-repeat;
-      background-size: cover;
-      text-decoration: none;
+    a {
       height: 50vw;
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: flex-end;
     }
   }
   
 }
-
-
-
 
 @media all and (min-width: 1000px) {
   .headlines {
@@ -85,8 +75,6 @@ h3 {
       height: 25vw;
     }
 
-
-}
-
+  }
 }
 

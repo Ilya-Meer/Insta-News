@@ -21,9 +21,6 @@ footer p {
 @media all and (min-width: 1000px) {
   
     footer {
-      bottom: 50px;
-      display: flex;
-      flex-flow: column wrap;
       justify-content: flex-start;
       align-items: flex-start;
       margin-left: 20px;
