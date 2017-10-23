@@ -158,6 +158,10 @@
   border: 1px solid #c4c4c4;
   z-index: -1;
   box-shadow: 0 0 10px -6px;
+
+  @media screen and (min-width: 1000px) {
+    margin-left: 50px;
+  }
 }
 
 .selectric-items .selectric-scroll {
