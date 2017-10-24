@@ -3,7 +3,7 @@ $(function () {
     event.preventDefault;
     $('header').addClass('add-photos');
     $('.headlines').empty();
-    $('.headlines').append('<img class="loader" src="assets/images/ajax-loader1.gif">');
+    $('.loader-div').append('<img class="loader" src="assets/images/ajax-loader1.gif">');
 
 
     var selected = $('#menu option:selected').val();
@@ -11,12 +11,6 @@ $(function () {
     url += '?' + $.param({
       'api-key': '1d3d67d37ae24c4a835479a2882cd51d'
     });
-
-    if ($('#menu option:selected').text() === '') {
-      $('.headlines').empty();
-      return true;
-    }
-
 
     $.ajax({
       url: url,
@@ -42,10 +36,12 @@ $(function () {
         });
       })
     .fail(function () {
-      $('.headlines').append('<h3>Sorry! There was a problem, please try again!</h3>');
-
-    }).always(function () {
+      $('.loader-div').empty();
+      $('.loader-div').append('<h3>Sorry! There was a problem, please try again!</h3>');
+  
+    }).always(function () {      
       $('.loader').remove();
+      
     });
   });
 

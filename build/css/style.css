@@ -384,18 +384,27 @@ select {
   width: 100px;
   margin: 20px auto; }
 
-h3 {
-  position: absolute;
-  left: 25%;
-  top: 55%;
-  font-style: italic; }
+.loader-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .loader {
-  position: absolute;
   width: 50px;
-  height: 50px;
-  left: 45%;
-  top: 60%; }
+  height: 50px; }
+
+h3 {
+  font-style: italic; }
 
 .list-image {
   background: rgba(50, 50, 50, 0.5);
@@ -453,8 +462,7 @@ footer {
           align-items: center; }
 
 footer p {
-  padding-top: 10rem;
-  margin-top: 90px;
+  margin-top: 30px;
   margin-bottom: 30px;
   color: #c2c2c2; }
 
