@@ -12,7 +12,7 @@ $(function () {
       'api-key': '1d3d67d37ae24c4a835479a2882cd51d'
     });
 
-    if($('#menu option:selected').text() === '') {
+    if ($('#menu option:selected').text() === '') {
       $('.headlines').empty();
       return true;
     }
@@ -41,12 +41,12 @@ $(function () {
           })
         });
       })
-      .fail(function () {
-        $('.headlines').append('<h3>Sorry! There was a problem, please try again!</h3>');
+    .fail(function () {
+      $('.headlines').append('<h3>Sorry! There was a problem, please try again!</h3>');
 
-      }).always(function () {
-        $('.loader').remove();
-      });
+    }).always(function () {
+      $('.loader').remove();
+    });
   });
 
   $('select').selectric();
