@@ -12,9 +12,6 @@
   border-radius: 6px;
   background: #333745;
   position: relative; }
-  @media screen and (min-width: 1000px) {
-    .selectric {
-      margin: 0 50px; } }
 
 .selectric .label {
   display: block;
@@ -140,9 +137,6 @@
   z-index: -1;
   -webkit-box-shadow: 0 0 10px -6px;
           box-shadow: 0 0 10px -6px; }
-  @media screen and (min-width: 1000px) {
-    .selectric-items {
-      margin-left: 50px; } }
 
 .selectric-items .selectric-scroll {
   height: 100%;
@@ -296,6 +290,8 @@ table {
 .instructions {
   margin-top: 20px;
   text-align: center; }
+  .instructions p {
+    padding-bottom: 10px; }
 
 .add-photos {
   display: -webkit-box;
@@ -335,8 +331,10 @@ table {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    width: 300px;
+    width: 160px;
     margin-left: 40px; }
+    .instructions p {
+      padding-bottom: 10px; }
   .add-photos {
     height: auto;
     margin: 10px auto;
@@ -357,7 +355,8 @@ table {
     .add-photos img {
       height: 80px;
       margin-top: 10px;
-      margin-left: 0; }
+      margin-left: 0;
+      margin-right: 20px; }
   .instructions {
     grid-column: 2 / 3;
     display: -webkit-box;
@@ -370,8 +369,9 @@ table {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    width: 300px;
-    margin-left: 0; } }
+    width: 180px;
+    margin-left: 30px;
+    padding-left: 30px; } }
 
 body {
   font-size: 16px;
