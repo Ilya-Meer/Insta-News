@@ -15,6 +15,10 @@
 .instructions {
   margin-top: 20px;
   text-align: center;
+
+   p {
+     padding-bottom: 10px;
+   }
 }
 
 .add-photos {
@@ -46,12 +50,16 @@
       display: flex;
       flex-flow: column wrap;
       justify-content: flex-start;
-      width: 300px;
+      width: 160px;
       margin-left: 40px;
+
+       p {
+         padding-bottom: 10px;
+       }
     }
 
-
-    .add-photos {
+    
+     .add-photos {
       height: auto;
       margin: 10px auto;
       padding-left: 40px;
@@ -81,6 +89,7 @@
       height: 80px;
       margin-top: 10px;
       margin-left: 0;
+      margin-right: 20px;
     }
   }
 
@@ -90,8 +99,10 @@
       display: flex;
       flex-flow: column wrap;
       justify-content: flex-start;
-      width: 300px;
-      margin-left: 0; 
+      width: 180px;
+      margin-left: 30px;
+      padding-left: 30px; 
+      
   }
 
 }  
