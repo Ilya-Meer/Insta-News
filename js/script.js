@@ -1,16 +1,22 @@
 $(function () {
+
+  // Changing header size on menu option select
+
   $('#menu').on('change', function (event) {
     event.preventDefault;
     $('header').addClass('add-photos');
     $('.headlines').empty();
     $('.loader-div').append('<img class="loader" src="assets/images/ajax-loader1.gif">');
 
+  // Generating API URL
 
     var selected = $('#menu option:selected').val();
     var url = 'https://api.nytimes.com/svc/topstories/v2/' + selected + '.json';
     url += '?' + $.param({
       'api-key': '1d3d67d37ae24c4a835479a2882cd51d'
     });
+
+  // Fetching Content
 
     $.ajax({
       url: url,
@@ -27,6 +33,8 @@ $(function () {
           var url = item.url;
           $('.headlines').append('<a class="anchor" style="background-image: url(' + image + ')" href="' + url + '"' + '>' + '<div class="list-image">' + title + '</div></a>');
 
+  // Toggles visibility of captions for each story on hover
+
           $('.anchor').on('mouseover', function () {
             $(this).children().css('visibility', 'visible');
           })
@@ -35,6 +43,9 @@ $(function () {
           })
         });
       })
+
+  // Error Message
+
     .fail(function () {
       $('.loader-div').empty();
       $('.loader-div').append('<h3>Sorry! There was a problem, please try again!</h3>');
@@ -44,6 +55,8 @@ $(function () {
       
     });
   });
+
+  // Initialize Selectric
 
   $('select').selectric();
 });
