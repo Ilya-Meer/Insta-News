@@ -1,4 +1,8 @@
+import '../sass/style.scss';
+
 $(function () {
+
+  
 
   // Changing header size on menu option select
 
@@ -10,11 +14,13 @@ $(function () {
 
   // Generating API URL
 
-    var selected = $('#menu option:selected').val();
-    var url = 'https://api.nytimes.com/svc/topstories/v2/' + selected + '.json';
-    url += '?' + $.param({
-      'api-key': '1d3d67d37ae24c4a835479a2882cd51d'
-    });
+    let selected = $('#menu option:selected').val();
+    let url = "https://api.nytimes.com/svc/topstories/v2/" + selected + '.json';
+    url += '?' + $.param({ 'api-key': '1d3d67d37ae24c4a835479a2882cd51d'
+
+    // let url = `https://api.nytimes.com/svc/topstories/v2/${selected}.json?$.param({ 'api-key': '1d3d67d37ae24c4a835479a2882cd51d`
+ 
+  });
 
   // Fetching Content
 
@@ -28,9 +34,9 @@ $(function () {
             return item;
           }
         }).splice(0, 12).forEach(function (item) {
-          var title = item.abstract;
-          var image = item.multimedia[item.multimedia.length - 1].url;
-          var url = item.url;
+          let title = item.abstract;
+          let image = item.multimedia[item.multimedia.length - 1].url;
+          let url = item.url;
           $('.headlines').append('<a class="anchor" style="background-image: url(' + image + ')" href="' + url + '"' + '>' + '<div class="list-image">' + title + '</div></a>');
 
   // Toggles visibility of captions for each story on hover
@@ -51,7 +57,7 @@ $(function () {
       $('.loader-div').append('<h3>Sorry! There was a problem, please try again!</h3>');
   
     }).always(function () {      
-      $('.loader').remove();
+      // $('.loader').remove();
       
     });
   });
