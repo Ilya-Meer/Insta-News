@@ -1,4 +1,7 @@
 import '../sass/style.scss';
+import $ from 'jquery';
+import selectric  from 'selectric';
+
 
 $(function () {
 
@@ -15,7 +18,7 @@ $(function () {
   // Generating API URL
 
     let selected = $('#menu option:selected').val();
-    let url = "https://api.nytimes.com/svc/topstories/v2/" + selected + '.json';
+    let url = 'https://api.nytimes.com/svc/topstories/v2/' + selected + '.json';
     url += '?' + $.param({ 'api-key': '1d3d67d37ae24c4a835479a2882cd51d'
 
     // let url = `https://api.nytimes.com/svc/topstories/v2/${selected}.json?$.param({ 'api-key': '1d3d67d37ae24c4a835479a2882cd51d`
@@ -57,7 +60,7 @@ $(function () {
       $('.loader-div').append('<h3>Sorry! There was a problem, please try again!</h3>');
   
     }).always(function () {      
-      // $('.loader').remove();
+      $('.loader-div').empty();
       
     });
   });
