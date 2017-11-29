@@ -3,7 +3,12 @@ footer {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  
+
+  @media #{$desktop} {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
 }
 
 footer p {
@@ -16,13 +21,3 @@ footer p {
   text-transform: uppercase;
 }
 
-
-@media all and (min-width: 1000px) {
-  
-    footer {
-      justify-content: flex-start;
-      align-items: flex-start;
-      margin-left: 20px;
-    }
-
-}

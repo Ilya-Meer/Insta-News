@@ -38,6 +38,17 @@ select {
 
 .headlines {
   width: 100%;
+  
+  @media #{$tablet} {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media #{$desktop} {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 
    a {
     background-repeat: no-repeat;
@@ -49,39 +60,12 @@ select {
     flex-flow: column wrap;
     justify-content: flex-end;
 
-  }
-
-}
-
-
-
-
-@media all and (min-width: 600px) {
-   
-  .headlines {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    a {
+    @media #{$tablet} {
       height: 50vw;
     }
-  }
-
-}
-
-@media all and (min-width: 1000px) {
-  .headlines {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-
-    a {
-      height: 25vw;
+    @media #{$desktop} {
+      height: 25vw;  
     }
-   
-
   }
 
 }
-
