@@ -5,8 +5,6 @@ import selectric  from 'selectric';
 
 $(function () {
 
-  
-
   // Changing header size on menu option select
 
   $('#menu').on('change', function (event) {
@@ -20,9 +18,6 @@ $(function () {
     let selected = $('#menu option:selected').val();
     let url = 'https://api.nytimes.com/svc/topstories/v2/' + selected + '.json';
     url += '?' + $.param({ 'api-key': '1d3d67d37ae24c4a835479a2882cd51d'
-
-    // let url = `https://api.nytimes.com/svc/topstories/v2/${selected}.json?$.param({ 'api-key': '1d3d67d37ae24c4a835479a2882cd51d`
- 
   });
 
   // Fetching Content
@@ -58,10 +53,9 @@ $(function () {
     .fail(function () {
       $('.loader-div').empty();
       $('.loader-div').append('<h3>Sorry! There was a problem, please try again!</h3>');
-  
-    }).always(function () {      
-      $('.loader-div').empty();
       
+    }).always(function () {      
+      $('.loader-div').empty();   
     });
   });
 
