@@ -1,10 +1,12 @@
 
 body {
-  font-size: 16px;
-  color: white;
+  max-width: 1440px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #fff;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-weight: 300;
-  background-color: black;
+  background-color: #000;
 }
 
 select {
@@ -49,12 +51,10 @@ select {
   }
   @media #{$desktop} {
     width: 100%;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
    a {
-    height: 100%;
     width: 100%;
     position: relative;
     display: flex;
@@ -69,20 +69,28 @@ select {
       }
     }
     @media #{$tablet} {
-      height: 50vw;
+      max-height: 270px;
       transition: all .2s ease-in-out;
     }
+    
     @media #{$desktop} {
-      height: 25vw;  
+      max-height: 200px;
+      transition: all .2s ease-in-out;
     }
 
     .thumbnail-wrapper {
-      width: 200%;
       overflow: hidden;
       img {
         width: 100%;
       }
     }
+  }
+}
 
+
+
+.touch {
+  .list-image {
+    visibility: visible;
   }
 }

@@ -18,6 +18,9 @@ footer p {
 }
 
 footer a {
-  color: #fff;
+  color: #fff; 
   text-decoration: none;
+  &:visited {
+    color: #fff;
+  }
 }
