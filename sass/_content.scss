@@ -69,8 +69,16 @@ select {
       }
     }
     @media #{$tablet} {
-      max-height: 270px;
+      max-height: 330px;
       transition: all .2s ease-in-out;
+      img {
+        transform: scale(1.3);
+      }
+      &:hover {
+        img {
+          transform: scale(1.45);
+        }
+      }
     }
     
     @media #{$desktop} {
