@@ -1,16 +1,14 @@
 import '../sass/style.scss';
 import $ from 'jquery';
-import selectric  from 'selectric';
-
+import '../lib/jquery.selectric';
 
 $(function () {
-
-  // Changing header size on menu option select
 
   $('#menu').on('change', function (event) {
     event.preventDefault;
     $('header').addClass('add-photos');
     $('.headlines').empty();
+    $('footer').hide();
     $('.loader-div').append('<img class="loader" src="assets/images/ajax-loader1.gif">');
 
   // Generating API URL
@@ -35,32 +33,32 @@ $(function () {
           let title = item.abstract;
           let image = item.multimedia[item.multimedia.length - 1].url;
           let url = item.url;
-          $('.headlines').append('<a class="anchor" style="background-image: url(' + image + ')" href="' + url + '"' + '>' + '<div class="list-image">' + title + '</div></a>');
-
-  // Toggles visibility of captions for each story on hover
-
+          $('.headlines').append(
+              '<a class="anchor"' +  
+              'href="' + url + '"' + '>' + 
+              '<div class="thumbnail-wrapper">' +
+              '<img src="' + image + '"/>' +
+              '</div>' +
+              '<div class="list-image">' + title + '</div></a>');
+          // style="background-image: url(' + image + ')"
           $('.anchor').on('mouseover', function () {
-            $(this).children().css('visibility', 'visible');
+            $(this).children('.list-image').css('visibility', 'visible');
           })
           $('.anchor').on('mouseleave', function () {
-            $(this).children().css('visibility', 'hidden');
+            $(this).children('.list-image').css('visibility', 'hidden');
           })
         });
+        $('footer').show();
       })
-
-  // Error Message
-
-    .fail(function () {
-      $('.loader-div').empty();
-      $('.loader-div').append('<h3>Sorry! There was a problem, please try again!</h3>');
-      
-    }).always(function () {      
-      $('.loader-div').empty();   
+      .fail(function () {
+        $('.loader-div').empty();
+        $('.loader-div').append('<h3>Sorry! There was a problem, please try again!</h3>');
+      }).always(function () {      
+        $('.loader-div').empty();   
+      });
     });
-  });
 
   // Initialize Selectric
-
   $('select').selectric();
 });
 

@@ -3,10 +3,8 @@ module.exports = {
   output: {
     filename: './build/bundle.js'
   },
-  devtool: "inline-source-map",
   module: {
     rules: [
-      // ...other loaders...
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -26,16 +24,9 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            options: {
-              sourceMap: true
-            }
           },
           {
             loader: 'sass-loader',
-            options: {
-              sourceMap: true
-            },
-
           }
         ]
       },
