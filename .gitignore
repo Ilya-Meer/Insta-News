@@ -22,4 +22,4 @@ ehthumbs.db
 # =============== #
 node_modules/
 # Ignore API Keys
-# apikeys
+config.js
